@@ -1,0 +1,42 @@
+
+/* Class = "IBUILabel"; text = "今天 12:00"; ObjectID = "8TT-EZ-woM"; */
+"8TT-EZ-woM.text" = "今天 12:00";
+
+/* Class = "IBUITabBarItem"; title = "发现"; ObjectID = "BGO-x8-pTp"; */
+"BGO-x8-pTp.title" = "发现";
+
+/* Class = "IBUITabBarItem"; title = "沟通"; ObjectID = "GBs-qa-mw6"; */
+"GBs-qa-mw6.title" = "沟通";
+
+/* Class = "IBUITabBarItem"; title = "联系人"; ObjectID = "GfF-F8-ZpI"; */
+"GfF-F8-ZpI.title" = "联系人";
+
+/* Class = "IBUINavigationItem"; title = "消息"; ObjectID = "SR3-YT-acT"; */
+"SR3-YT-acT.title" = "消息";
+
+/* Class = "IBUITabBarItem"; title = "设置"; ObjectID = "SyP-7d-SrB"; */
+"SyP-7d-SrB.title" = "设置";
+
+/* Class = "IBUINavigationItem"; title = "Root View Controller"; ObjectID = "U1l-MJ-FJm"; */
+"U1l-MJ-FJm.title" = "Root View Controller";
+
+/* Class = "IBUILabel"; text = "账号："; ObjectID = "Zwc-Ql-4tK"; */
+"Zwc-Ql-4tK.text" = "账号：";
+
+/* Class = "IBUINavigationItem"; title = "Root View Controller"; ObjectID = "bV4-nT-4an"; */
+"bV4-nT-4an.title" = "Root View Controller";
+
+/* Class = "IBUILabel"; text = "jeffrey liu"; ObjectID = "cTU-ZE-pzd"; */
+"cTU-ZE-pzd.text" = "jeffrey liu";
+
+/* Class = "IBUINavigationItem"; title = "我的动态"; ObjectID = "iko-q1-RKW"; */
+"iko-q1-RKW.title" = "我的动态";
+
+/* Class = "IBUILabel"; text = "夏天不要下水游泳的通知：。。。"; ObjectID = "qrX-RD-WBm"; */
+"qrX-RD-WBm.text" = "夏天不要下水游泳的通知：。。。";
+
+/* Class = "IBUILabel"; text = "1"; ObjectID = "yUE-qY-kYl"; */
+"yUE-qY-kYl.text" = "1";
+
+/* Class = "IBUILabel"; text = "Jeffrey Liu"; ObjectID = "yZn-zN-6Og"; */
+"yZn-zN-6Og.text" = "Jeffrey Liu";

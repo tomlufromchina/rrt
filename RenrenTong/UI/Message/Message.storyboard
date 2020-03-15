@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Mgs-rd-mAp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="JbY-sQ-58N">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="Mgs-rd-mAp" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4F-FA-qf3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ceB-hb-O6U">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mgs-rd-mAp" id="wzJ-M1-bhE"/>
+                                    <outlet property="delegate" destination="Mgs-rd-mAp" id="hga-pw-Q1U"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="84F-M3-ZKS" userLabel="底部工具条">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputpanel_background" id="l99-Ry-Eek">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A2d-8h-BzT" userLabel="Button - voice">
+                                        <rect key="frame" x="11" y="10" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="input_voice">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="voiceBtnClicked:" destination="Mgs-rd-mAp" eventType="touchUpInside" id="85u-pq-xrv"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LtG-UL-g4A" userLabel="Button - text">
+                                        <rect key="frame" x="11" y="10" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="input_text">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="textBtnClicked:" destination="Mgs-rd-mAp" eventType="touchUpInside" id="Sm3-5E-uuA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S8w-wt-MMa" userLabel="Button - face">
+                                        <rect key="frame" x="247" y="11" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="input_expression">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="faceBtnClicked:" destination="Mgs-rd-mAp" eventType="touchUpInside" id="doo-EP-eB3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2OV-PW-ek0" userLabel="Button - more">
+                                        <rect key="frame" x="280" y="11" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="more">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moreBtnClicked:" destination="Mgs-rd-mAp" eventType="touchUpInside" id="ooF-XO-R0w"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="3oD-2J-iFg">
+                                        <rect key="frame" x="46" y="7" width="188" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                    </textView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AjB-ei-e7M">
+                                        <rect key="frame" x="46" y="7" width="188" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="按住说话">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beginToRecord:" destination="Mgs-rd-mAp" eventType="touchDown" id="i8T-m5-EbQ"/>
+                                            <action selector="cancelRecord:" destination="Mgs-rd-mAp" eventType="touchUpOutside" id="bQr-bp-HWl"/>
+                                            <action selector="dragEnter:" destination="Mgs-rd-mAp" eventType="touchDragEnter" id="6tK-h9-Bsv"/>
+                                            <action selector="dragExit:" destination="Mgs-rd-mAp" eventType="touchDragExit" id="Xfz-7A-JrZ"/>
+                                            <action selector="finishRecord:" destination="Mgs-rd-mAp" eventType="touchUpInside" id="aBi-3B-4Es"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" id="xbg-3Z-M7I">
+                                <rect key="frame" x="108" y="161" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_wrap" id="SG1-fB-x4F">
+                                        <rect key="frame" x="0.0" y="-2" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_cancel" id="ngv-Nf-EC7">
+                                        <rect key="frame" x="29" y="17" width="40" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_0" id="pBK-Mq-i41">
+                                        <rect key="frame" x="31" y="11" width="38" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手指上滑,取消发送" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Eg-r8-JR2">
+                                        <rect key="frame" x="0.0" y="78" width="100" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceBtn" destination="S8w-wt-MMa" id="pCw-ph-sgp"/>
+                        <outlet property="moreBtn" destination="2OV-PW-ek0" id="SuY-of-N0E"/>
+                        <outlet property="recordBoard" destination="xbg-3Z-M7I" id="saq-ZN-DZW"/>
+                        <outlet property="recordCancelImgView" destination="ngv-Nf-EC7" id="nNw-Hn-u6j"/>
+                        <outlet property="recordLabel" destination="9Eg-r8-JR2" id="0bP-OO-lNJ"/>
+                        <outlet property="recordMicImgView" destination="pBK-Mq-i41" id="lxe-FE-ncw"/>
+                        <outlet property="speekBtn" destination="AjB-ei-e7M" id="J34-l9-hTE"/>
+                        <outlet property="tableView" destination="ceB-hb-O6U" id="aWf-dP-5I9"/>
+                        <outlet property="textBtn" destination="LtG-UL-g4A" id="BBl-Dc-oyL"/>
+                        <outlet property="textField" destination="3oD-2J-iFg" id="Ftg-2Q-Uwd"/>
+                        <outlet property="toolView" destination="84F-M3-ZKS" id="jjW-F7-T7v"/>
+                        <outlet property="voiceBtn" destination="A2d-8h-BzT" id="3nL-8T-fbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkU-Dw-gEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163" y="-84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="input_expression" width="26" height="26"/>
+        <image name="input_text" width="26" height="26"/>
+        <image name="input_voice" width="26" height="26"/>
+        <image name="inputpanel_background" width="8" height="9"/>
+        <image name="mic_0" width="37" height="64"/>
+        <image name="mic_cancel" width="40" height="52"/>
+        <image name="mic_wrap" width="100" height="100"/>
+        <image name="more" width="26" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

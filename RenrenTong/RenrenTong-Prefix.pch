@@ -1,0 +1,109 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <AVFoundation/AVFoundation.h>
+
+    #import "RRTManager.h"
+    #import "NetWorkManager.h"
+    #import "ObjectsEntity.h"
+    #import "CommonCheckingObejects.h"
+    #import "CommonSchoolInTheHouse.h"
+    #import "EnumDefine.h"
+    #import "CacheManager.h"
+    #import "CoreData+MagicalRecord.h"
+    #import "DataManager.h"
+    #import "ViewControllerIdentifier.h"
+    #import "UIImageView+WebCache.h"
+    #import "UIViewExt.h"
+    #import "UINavigationController+Addition.h"
+
+    #import "BaseViewController.h"
+    #import "BaseTableViewController.h"
+
+    #import "NSArray+Log.h"
+    #import "NSDictionary+Log.h"
+    #import "MBProgressHUD+NJ.h"
+
+
+#define appColor [UIColor colorWithRed:22.0/255 green:165.0/255 blue:85.0/255 alpha:1.0]
+#define homeHeaderColor [UIColor colorWithRed:72.0/255 green:193.0/255 blue:77.0/255 alpha:1.0]
+#define homeHeaderColor1 [UIColor colorWithRed:74.0/255 green:226.0/255 blue:75.0/255 alpha:1.0]
+#define theLoginButtonColor [UIColor colorWithRed:28.0/255 green:204.0/255 blue:83.0/255 alpha:1.0]
+#define RegisterHeaderColor [UIColor colorWithRed:255.0/255 green:159.0/255 blue:84.0/255 alpha:1.0]
+#define SwitchColor1 [UIColor colorWithRed:255.0/255 green:163.0/255 blue:70.0/255 alpha:1.0]
+#define SwitchColor2 [UIColor colorWithRed:105.0/255 green:173.0/255 blue:249.0/255 alpha:1.0]
+#define SwitchColor3 [UIColor colorWithRed:27.0/255 green:203.0/255 blue:82.0/255 alpha:1.0]
+
+//TextColor
+#define MainTextColor [UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:1.0]
+#define GrayTextColor [UIColor colorWithRed:178.0/255 green:178.0/255 blue:178.0/255 alpha:1.0]
+#define OtherTextColor UIColor colorWithRed:128.0/255 green:128.0/255 blue:128.0/255 alpha:1.0]
+//SpaceLineColor
+#define LineColor [UIColor colorWithRed:212.0/255 green:212.0/255 blue:212.0/255 alpha:1.0]
+#define MainLineColor [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:1.0]
+
+#define SpaceBGColor [UIColor colorWithRed:246.0/255 green:246.0/255 blue:246.0/255 alpha:1.0]
+//commentViewButtonColor
+#define CommentViewTextColor [UIColor colorWithRed:70.0/255 green:154.0/255 blue:172.0/255 alpha:1.0]
+
+#define APPKEY @"54882922fd98c5d701000b21"
+#define aedudomain    @"aedu.cn"
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define appHeadImage  [NSString stringWithFormat:@"http://images.%@/Avatars/",aedudomain]
+#define appPhotoImage [NSString stringWithFormat:@"http://images.%@/Photo/",aedudomain]
+#define KEYCHAIN_SERVICE @"com.aedu.rrt"
+
+#define ChatImagePath  @"Aedu.Chat.Image"
+#define ChatVoicePath  @"Aedu.Chat.Voice"
+#define CommunicationVoicePath   @"Aedu.CommunicationVoice.Voice"
+#define ActivityPath   @"Aedu.Activity"
+#define SchoolAndGuardianPath @"Aedu.SchoolAndGuardian"
+#define APP_URL        @"http://itunes.apple.com/lookup?id="// 获取更新版本
+
+#define SCREENWIDTH [UIScreen mainScreen ].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen ].bounds.size.height
+
+#pragma mark - 设备型号识别
+#define is_IOS_8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define is_IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+#define kContactDeleted @"kContactDeleted"
+#define kBushBaoCun     @"kBushBaoCun"
+#define kBushBaoCun2    @"kBushBaoCun2"
+#define ModificationHeader @"ModificationHeader"
+#define kTheReachabilityChangedNotification @"kNetworkReachabilityChangedNotification"
+
+
+#define NoNetworkingMsg @"网络未连接"
+#define LoadingMsg @"加载中...请等待"
+
+//通用的成功回调block，避免多次使用delegate(发表微博、日志、相册回调时候刷新界面)
+typedef void (^CommonSuccessBlock) ();
+
+#import "NotificationNameID.h"
+#import "SoundCenter.h"
+#import "GCDAsyncSocket.h"
+#import "Connection.h"
+#import "PacketProcess.h"
+#import "BasePacket.pb.h"
+#import "Presence.pb.h"
+#import "Message.pb.h"
+#import "Iq.pb.h"
+#import "HttpUtil.h"
+#import "ErrorModel.h"
+#endif
+
+

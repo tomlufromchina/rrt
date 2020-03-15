@@ -1,0 +1,53 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <AVFoundation/AVFoundation.h>
+
+    #import "RRTManager.h"
+    #import "NetWorkManager.h"
+    #import "ObjectsEntity.h"
+    #import "EnumDefine.h"
+    #import "CacheManager.h"
+    #import "CoreData+MagicalRecord.h"
+    #import "DataManager.h"
+    #import "ViewControllerIdentifier.h"
+    #import "UIImageView+WebCache.h"
+    #import "UIViewExt.h"
+
+    #import "UINavigationController+Addition.h"
+
+    #import "BaseViewController.h"
+    #import "BaseTableViewController.h"
+
+
+#define appColor [UIColor colorWithRed:22.0/255 green:165.0/255 blue:85.0/255 alpha:1.0]
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define appHeadImage  @"http://images.aedu.cn/Avatars/"
+#define appPhotoImage @"http://images.aedu.cn/Photo/"
+#define KEYCHAIN_SERVICE @"com.aedu.rrt"
+
+#define ChatImagePath  @"Aedu.Chat.Image"
+#define ChatVoicePath  @"Aedu.Chat.Voice"
+#define ActivityPath   @"Aedu.Activity"
+
+#define SCREENWIDTH [UIScreen mainScreen ].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen ].bounds.size.height
+
+//通用的成功回调block，避免多次使用delegate(发表微博、日志、相册回调时候刷新界面)
+typedef void (^CommonSuccessBlock) ();
+
+#endif
+
+
